@@ -1,0 +1,10 @@
+#include<stdio.h>
+
+int main()                                                                      //main function starts
+{
+  int r;                                                                        // get radius r
+  int area=3.14*r*r;                                                            // logic
+  
+  printf("%d,area);                                                              //Print output
+
+}
