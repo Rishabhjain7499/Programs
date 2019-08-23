@@ -4,7 +4,7 @@ int main()
 {
 
 int b,h,area;
-
+printf("Enter bradth and height");
 scanf("%d%d",&b,&h);
 area=b*h/2;
 printf("%d",area);
