@@ -1,0 +1,59 @@
+#include<stdio.h>
+int c;                                        // taking a count variable c for counting the time of algo
+void inputArray(int a[],int n)						//taking input from the user
+{
+	int count;
+	for(count=0;count<n;count++)
+	{
+		printf("Enter the Elements\n");
+		scanf("%d",&a[count]);
+	}
+}
+void outputArray(int a[],int n)						//showing output given by user
+{
+	int count;
+	for(count=0;count<n;count++)
+	{
+		printf("%d\n",a[count]);
+	}
+}
+int insertionsort(int a[],int n)					//Insertion sort 
+{
+	int i,j,key;
+				c++;
+	for(j=1;j<n;j++)
+	{
+				c++;
+		key=a[j];
+				c++;
+		i=j-1;
+				c++;
+		while(i>=0 && a[i]>key)
+		{
+					c++; c++;
+			a[i+1]=a[i];
+					c++;
+			i=i-1;
+					c++;
+		}
+		a[i+1]=key;
+					c++;
+	}
+}
+
+void main()
+{
+	void inputArray(int [],int n);						//declaration 
+	void outputArray(int [],int n);						//declaration
+	int insertionSort(int [],int n);					//declaration
+	int n,a[100];										//declaration of variable
+	printf("Enter the size of array");					
+	scanf("%d",&n);										//size of array from user side
+	inputArray(a,n);									//calling input fuinction
+	printf("Array before sorting");
+	outputArray(a,n);
+	insertionsort(a,n);
+	printf("array after sorting");
+	outputArray(a,n);									// calling output function
+	printf("\n the value of count=%d",c);								
+}
