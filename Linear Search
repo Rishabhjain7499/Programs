@@ -1,0 +1,60 @@
+#include<stdio.h>
+int c;
+void inputArray(int a[],int n)				//taking input from the user
+{
+	int count;
+	for(count=0;count<n;count++)
+	{
+		printf("Enter the Elements\n");
+		scanf("%d",&a[count]);
+	}
+}
+void outputArray(int a[],int n)						//showing output given by user
+{
+	int count;
+	for(count=0;count<n;count++)
+	{
+		printf("%d\n",a[count]);
+	}
+}
+int LinearSearch(int a[],int n,int item)			//Linear search function Definition
+{
+	int count;
+			c++;
+	for(count=0;count<n;count++)
+	{
+		c++;
+		if(a[count]==item)
+		{
+			c++;
+			return count;
+		}
+	}
+	c++;
+	return -1;
+}
+
+void main()
+{
+	void inputArray(int [],int n);						//declaration 
+	void outputArray(int [],int n);						//declaration
+	int LinearSearch(int [],int n,int item);			//declaration
+	int n,item,position,a[100];							//declaration of variable
+	printf("Enter the size of array");					
+	scanf("%d",&n);										//size of array from user side
+	inputArray(a,n);									//calling input fuinction
+	printf("Enter the item you want to search");		// element searched by user from array
+	scanf("%d",&item);
+	position=LinearSearch(a,n,item);					//calling LinearSearch function
+	if(position==-1)
+	{
+		printf("Item is not found\n");
+	}
+	else
+	{
+		printf("%d is found at %d index\n",item,position);
+	}	
+	printf("Array after sorting\n");
+	outputArray(a,n);									// calling output function
+	printf("Count =%d",c);
+}
