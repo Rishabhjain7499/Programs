@@ -49,7 +49,7 @@ p{
    var mul=num1*num2;
    document.getElementById("id3").innerHTML="Multiplication ="+mul;
  }
- function Division()											//function Division]
+ function Division()											//function Division
  {
    //var a=prompt("Enter the 1st Number:");
    var num1=Number(document.getElementById("Num1").value);
