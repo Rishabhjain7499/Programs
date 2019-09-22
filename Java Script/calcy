@@ -1,1 +1,81 @@
+<html>
+<head>
+<style>													//css
+button{																		
+	border:solid;
+	background-color:gray;
+	color:white;
+	padding:5px;
+	border-color:blue;
+	font-size:20;
+}
+input{
+	border:solid;
+	color:blue;
+	font-size:20;
+}
+p{
+	font-size:20;
+	
+}
 
+</style>
+<script>										
+ function Addition()										//function Addition	
+ {
+   //var a=prompt("Enter the 1st Number:");
+   var num1=Number(document.getElementById("Num1").value);
+   //var b=prompt("Enter the 2nd Number:");
+   var num2=Number(document.getElementById("Num2").value);
+   var add=num1+num2;
+   document.getElementById("id1").innerHTML="Addition ="+add;
+   
+ }
+  function Subtraction()									//function Subtraction
+ {
+   //var a=prompt("Enter the 1st Number:");
+   var num1=Number(document.getElementById("Num1").value);
+   //var b=prompt("Enter the 2nd Number:");
+   var num2=Number(document.getElementById("Num2").value);
+   var sub=num1-num2;
+   document.getElementById("id2").innerHTML="Subtraction ="+sub;
+ }
+ function Multiplication()										//function Multiplication
+ {
+   //var a=prompt("Enter the 1st Number:");
+   var num1=Number(document.getElementById("Num1").value);
+   //var b=prompt("Enter the 2nd Number:");
+   var num2=Number(document.getElementById("Num2").value);
+   var mul=num1*num2;
+   document.getElementById("id3").innerHTML="Multiplication ="+mul;
+ }
+ function Division()											//function Division]
+ {
+   //var a=prompt("Enter the 1st Number:");
+   var num1=Number(document.getElementById("Num1").value);
+   //var b=prompt("Enter the 2nd Number:");
+   var num2=Number(document.getElementById("Num2").value);
+   
+   var div=num1/num2;
+   document.getElementById("id4").innerHTML="Division ="+div;
+ }
+ 
+</script>
+</head>
+<body>																					
+  <input id="Num1" type="text" name="Number1" value="">
+  <input id="Num2" type="text" name="Number2" value=""><br><br>
+  <table>
+  <tr>
+<td><button onclick="Addition()" >Addition </button> </td>
+<td><button onclick="Subtraction()" >Subtraction </button> </td>
+<td><button onclick="Multiplication()" >Multiplication </button> </td>
+<td><button onclick="Division()" >Division </button> </td>
+</tr>
+</table>
+<p id="id1"> Addition =</p>
+<p id="id2"> Subtraction =</p>
+<p id="id3"> Multiplication =</p>
+<p id="id4"> Division =</p>
+</body>
+</html>
